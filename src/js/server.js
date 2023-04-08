@@ -2,6 +2,7 @@ import koaBody from 'koa-body';
 import cors from '@koa/cors';
 import Router from '@koa/router';
 import Koa from 'koa';
+// eslint-disable-next-line import/extensions
 import createRandomMessage from './createRandomMessage.js';
 
 const server = new Koa();
@@ -37,5 +38,6 @@ server.use(router.allowedMethods());
 
 // Запускаем сервер
 server.listen(3000, () => {
+	// eslint-disable-next-line no-console
 	console.log('Server started on port 3000');
 });
