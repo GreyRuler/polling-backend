@@ -34,13 +34,3 @@ jobs:
 
             -   name: Run Test 🔨
                 run: npm run test
-
-            -   name: Build 👷
-                run: npm run build
-
-            -   name: Deploy ✈
-                run: |
-                    git remote set-url origin https://git:${TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-                    npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-                env:
-                    TOKEN: ${{ secrets.TOKEN }}
